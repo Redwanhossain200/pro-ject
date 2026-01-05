@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Center Flex</title>
+  <link rel="stylesheet" href="css/nav.css">
+  <style>
+    .container {
+      /* width: 100%; */
+      height: 600px;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      background-color: burlywood;
+      border: 3px solid yellowgreen;
+      border-radius: 20px;
+      box-shadow: 10px 10px 20px gray;
+      font-size: 3em;
+      height: 300px;
+      width: 300px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('river.jpg');
+      filter: blur(4px);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .box:hover {
+      box-shadow: 0 0 20px palevioletred;
+      text-shadow: 0 0 10px white;
+      filter: none;
+      font-size: 2em;
+      color: white;
+      transform: scale(1.2);
+      border: purple solid 3px;
+      border-radius: 50%;
+      justify-content: center;
+    }
+
+    .text {
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: orange;
+      font-size: 0.4em;
+      font-weight: bold;
+      filter: none;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .text:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      filter: blur('5px');
+      color: whitesmoke;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="center.html">Center</a></li>
+        <li><a href="flex.html">Flex</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="box">
+      <div class="text">
+        HI, THERE, WELCOME TO OUR BANGLADESH
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

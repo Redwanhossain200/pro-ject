@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      border: thin solid red;
+    }
+
+    table {
+      border: 2px solid white;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 2px solid white;
+      padding: 10px 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="center.html">Center</a></li>
+        <li><a href="flex.html">Flex</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Friends</h2>
+    <table>
+      <caption style="color: purple;text-decoration: line-through;font-weight: 600;">My Friends collection</caption>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Priya</td>
+          <td>Maya</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Anika</td>
+          <td>Sadia</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Tania</td>
+          <td>Rina</td>
+          <td>16</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">Total Friends: 3</td>
+        <td colspan="3">51</td>
+      </tfoot>
+    </table>
+  </main>
+  <section>
+    <h2>Table</h2>
+    <ul>
+      <li>Table:table</li>
+      <li>Table head:thead</li>
+      <li>Table body:tbody</li>
+      <li>Table foot:tfoot</li>
+      <li>table row:tr</li>
+      <li>table data:td</li>
+      <li>table header:th</li>
+    </ul>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+.Blog {
+  text-align: justify;
+  margin-top: none;
+  background-color: lightpink;
+  border: 20px solid teal;
+  border-top: 15px solid palevioletred;
+  border-bottom: none;
+  border-left: 12px solid rgb(2, 101, 101);
+  border-radius: 50px;
+  margin-top: 25px;
+  padding: 20px;
+}
+
+h2 {
+  color: darkmagenta;
+  text-decoration: underline;
+}
+
+#second-blog {
+  background-color: aquamarine;
+  /* display: none; */
+  
+}

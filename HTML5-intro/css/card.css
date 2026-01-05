@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: wheat;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.card-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  border: 2px solid saddlebrown;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 10px 10px 10px gray;
+  margin: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 166, 0, 0.562);
+  box-shadow: 12px 12px 15px darkgray;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.card p {
+  font-size: 1em;
+  color: darkslategray;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: saddlebrown;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.card button:hover {
+  background-color: orange;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-conatiner .card {
+  margin: 15px;
+}
+
+.card-conatiner .card:nth-child(odd) {
+  background-color: lavenderblush;
+}
+
+.card-conatiner .card:nth-child(even) {
+  background-color: honeydew;
+}
+
+.card-conatiner .card:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+.card button:hover {
+  background-color: darkorange;
+}
+
+.card button {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card img {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  font-weight: bold;
+}
+
+.card button:hover {
+  color: white;
+}
+
+.card-conatiner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.card button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 20px gray;
+}
+
+.card img {
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+.card h3 {
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
