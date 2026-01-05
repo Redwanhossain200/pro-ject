@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Practice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      padding: 20px;
+      background-color: linear-gradient(to right, #f8f9fa, #e9ecef);
+      color: black;
+    }
+
+    .basic-info {
+      border: 2px solid black;
+      max-width: 100%;
+      margin: auto;
+      padding: 10px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .basic-info label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .basic-info img {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .basic-info a {
+      display: block;
+      margin-top: 10px;
+      /* text-decoration: none; */
+      color: blue;
+    }
+
+    form {
+      max-width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      color: purple;
+      background-color: white;
+      border-radius: 20px;
+      border: 2px solid black;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    input[type="submit"] {
+      width: auto;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #4CAF50;
+      transition: all 0.3s linear;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+      text-shadow: 0 0 5px white;
+      box-shadow: 0 0 5px #45a049;
+      transform: translateY(-2px);
+
+    }
+
+    video {
+      display: block;
+      margin-top: 20px;
+      max-width: 100%;
+      border: 2px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.02);
+    }
+
+    input[type="button"] {
+      width: 60px;
+      height: 28px;
+      background-color: #008CBA;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #008CBA;
+      transition: all 0.3s linear;
+      font-size: 12px;
+    }
+
+    input[type="button"]:hover {
+      background-color: #007B9E;
+      text-shadow: 0 0 5px white;
+      box-shadow: 0 0 5px #007B9E;
+      transform: translateY(-2px);
+    }
+
+    input[type="text"] {
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      height: 30px;
+      padding: 5px;
+      margin-top: 10px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      border-color: #66afe9;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <fieldset class="basic-info">
+    <label for="image">Search your image here:</label>
+    <input type="text" name="" id="image">
+    <input type="button" value="Search">
+    <img src="panda.jpg" alt="kungfu panda" width="190px" height="200px">
+    <a href="../HTML5-intro/card.html">For more click here</a>
+  </fieldset>
+  <form>
+    <fieldset class="basic-info">
+      <p><label for="image">Facebook form:</label></p>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="enter your name" required>
+      <br><br>
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" required>
+      <br><br>
+      <label for="comment">Comment:</label>
+      <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+  <video src="../HTML5-intro/car.mp4" controls></video>
+</body>
+
+</html>
