@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storytelling Contest Feedback</title>
+
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #7F00FF, #E100FF);
+      box-shadow: 0 0 20px rgba(157, 0, 255, 0.7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Form Container */
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #9D00FF;
+    }
+
+    /* Labels */
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #2575fc90;
+    }
+
+    /* Inputs */
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      margin-bottom: 15px;
+    }
+
+    textarea:focus,
+    select:focus {
+      border-color: #2575fc;
+    }
+
+    /* Submit Button */
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(150deg, #7F00FF, #E100FF);
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      box-shadow: 0 6px 12px rgba(157, 0, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(135deg, #9D00FF, #FF2CDF);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(157, 0, 255, 0.4);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Storytelling Contest Feedback</h2>
+
+    <form>
+      <!-- Story textarea -->
+      <label for="story">Share Your Story:</label><br />
+      <textarea id="story" name="story" rows="6" cols="50" placeholder="Write your story here..." required></textarea>
+      <br />
+
+      <!-- Rating dropdown -->
+      <label for="rating">Rate the Story:</label><br />
+      <select id="rating" name="rating" required>
+        <option value="">Select Rating</option>
+        <option value="good">Good</option>
+        <option value="very-good">Very Good</option>
+        <option value="excellent">Excellent</option>
+        <option value="outstanding">Outstanding</option>
+      </select>
+      <br />
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit Feedback">
+    </form>
+  </div>
+
+</body>
+
+</html>
