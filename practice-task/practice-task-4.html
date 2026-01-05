@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Team</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* Team Section  */
+    .team-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* Flexbox Container */
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    /* Card Styles */
+    .card {
+      background-color: #ffffff;
+      width: 280px;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Hover Animation */
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Profile Image  */
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Text */
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .card h4 {
+      margin: 0 0 15px;
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Responsive Breakpoints */
+
+    /* Tablets (max-width: 992px) */
+    @media (max-width: 992px) {
+      .team-container {
+        gap: 20px;
+      }
+    }
+
+    /* Mobile devices (max-width: 600px) */
+    @media (max-width: 600px) {
+      .team-section h2 {
+        font-size: 26px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+
+    <div class="team-container">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Alex Johnson">
+        <h3>Mahbubur Rahman</h3>
+        <h4>Frontend Developer</h4>
+        <p>
+          Mahbubur Rahman builds responsive, accessible, and modern user interfaces
+          using the latest frontend technologies.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1580894908361-967195033215?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Sara Williams">
+        <h3>Mim Talukder</h3>
+        <h4>UI/UX Designer</h4>
+        <p>
+          Mim designs beautiful layouts and smooth user experiences
+          focused on usability and clarity.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Michael Brown">
+        <h3>Redwan Hossain</h3>
+        <h4>Backend Developer</h4>
+        <p>
+          Redwan handles server-side logic, databases, and application
+          performance optimization.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
