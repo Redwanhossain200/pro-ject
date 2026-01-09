@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h3::before {
+      content: 'Start: ';
+      background-color: yellowgreen;
+      color: purple;
+      font-size: 10px;
+    }
+
+    h3::after {
+      content: '.pdf';
+      background-color: yellowgreen;
+      color: purple;
+      font-size: 10px;
+    }
+
+    p::first-letter {
+      font-size: xx-large;
+      background-color: yellow;
+    }
+
+    p::first-line {
+      background-color: rgba(127, 255, 212, 0.37);
+      font-size: normal;
+    }
+
+    ::selection {
+      background-color: coral;
+      color: seagreen;
+    }
+
+    p::placeholder {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Heading -1</h3>
+  <h3>Heading -2</h3>
+  <h3>Heading -3</h3>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ad commodi tenetur necessitatibus perspiciatis
+    earum odio sed adipisci eveniet.</p>
+  <p>Autem eum quod molestias explicabo itaque quisquam eos suscipit debitis incidunt laboriosam dolores praesentium
+    tempora, ab totam, doloremque omnis? Nobis.</p>
+  <p>Praesentium accusamus quisquam optio commodi qui at magnam culpa quis. Omnis accusantium inventore atque
+    doloremque, rem voluptatum quos nesciunt fugiat.</p>
+</body>
+
+</html>
