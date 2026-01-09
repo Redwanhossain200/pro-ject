@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psedue</title>
+  <style>
+    body {
+      background-color: gray;
+    }
+
+    h3 {
+      color: peru;
+    }
+
+    /* hover means mouse hover  */
+    h3:hover {
+      color: tomato;
+      background-color: yellowgreen;
+    }
+
+    /* focus */
+    input:focus {
+      color: blueviolet;
+      padding: 20px;
+      outline: 0;
+      border: 1px solid purple;
+    }
+
+    /* Visited  */
+    a:visited {
+      color: aqua;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Nth Chils property */
+    /* li:last-child {
+      color: rebeccapurple;
+    }
+
+    li:first-child {
+      background-color: coral;
+      color: whitesmoke;
+    } */
+
+    li:nth-child(2n+1) {
+      color: white;
+      background-color: darkgreen;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      width: 300px;
+      height: fit-content;
+      border-radius: 50px;
+      font-size: xx-large;
+
+    }
+
+    li:nth-child(2n) {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+      height: fit-content;
+      border-radius: 50px;
+      font-size: xx-small;
+      margin: 20px 0;
+      color: white;
+      transition: all 0.2s ease;
+      text-shadow:
+        0 0 10px chartreuse,
+        0 0 20px chartreuse,
+        0 0 40px chartreuse,
+        0 0 80px chartreuse;
+    }
+
+    li:nth-child(2n):hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      font-size: xx-large;
+      box-shadow: 0 0 15px 6px greenyellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>My heading</h3>
+  <input type="text" name="" id="">
+  <br><br>
+  <input type="text" name="" id="">
+  <br><br>
+  <a href="http://google.com/">Google</a>
+  <a href="https://www.youtube.com/">Youtube</a>
+
+  <ul>
+    <li>Alia</li>
+    <li>dalia</li>
+    <li>balioa</li>
+    <li>malia</li>
+    <li>jaila</li>
+    <li>palua</li>
+    <li>mahua</li>
+  </ul>
+</body>
+
+</html>
