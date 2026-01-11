@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 2nd</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .rgb-box {
+      width: 250px;
+      padding: 20px;
+      border-radius: 12px;
+      position: relative;
+      background: #111;
+      color: #fff;
+      margin: auto;
+      text-align: center;
+      top: 250px;
+      transition: 0.3s;
+    }
+
+    .rgb-box::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      background: linear-gradient(90deg,
+          red, yellow, lime, cyan, blue, magenta, red);
+      border-radius: inherit;
+      z-index: -1;
+      animation: rgb 4s linear infinite;
+      transition: 0.3s;
+    }
+
+    .rgb-box:hover {
+      transform: scale(1.05);
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .rgb-box:hover::before {
+      filter: brightness(1.8) hue-rotate(360deg);
+      animation-duration: 2s;
+    }
+
+    @keyframes rgb {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rgb-box">Hover RGB Border</div>
+
+</body>
+
+</html>

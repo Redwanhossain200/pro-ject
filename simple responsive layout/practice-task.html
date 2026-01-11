@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive flex layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+    }
+
+    body {
+      background: black;
+      box-shadow: none;
+      padding: 40px;
+    }
+
+    /* main container */
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 12px;
+      /* border: 2px solid black; */
+      /* padding: 20px; */
+      background: #fff;
+    }
+
+    /* common box style */
+    .box {
+      flex: 1;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      border-radius: 10px;
+    }
+
+    /* left & right color */
+    .left {
+      max-width: 300px;
+      background: #dbeafe;
+      color: chocolate;
+      text-shadow:
+        0 0 5px plum,
+        0 0 10px plum,
+        0 0 20px plum,
+        0 0 40px plum,
+        0 0 80px plum;
+      box-shadow:
+        0 0 5px palevioletred,
+        0 0 10px plum,
+        0 0 20px blueviolet,
+        0 0 40px plum,
+        0 0 80px palegoldenrod;
+    }
+
+    .right {
+      background: #f1f5f9;
+      max-width: 500px;
+      color: violet;
+      text-shadow:
+        0 0 5px cyan,
+        0 0 10px plum,
+        0 0 20px gold,
+        0 0 40px cyan,
+        0 0 80px plum;
+      box-shadow:
+        0 0 5px blue,
+        0 0 10px cyan,
+        0 0 20px blueviolet,
+        0 0 40px coral,
+        0 0 80px blue;
+    }
+
+    /* 📱 Mobile responsive */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        max-width: 300px;
+        row-gap: 8px;
+        padding: 10px;
+      }
+
+      .left {
+        max-width: 300px;
+        min-height: 100px;
+        background-color: teal;
+        color: #f3e8ff;
+      }
+
+      .right {
+        max-width: 300px;
+        background-color: sandybrown;
+        color: gray;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box left">Left</div>
+    <div class="box right">Right</div>
+  </div>
+</body>
+
+</html>
