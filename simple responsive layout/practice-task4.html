@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner RGB Glow Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* background-image: url('https://images.pexels.com/photos/1153655/pexels-photo-1153655.jpeg'); */
+      background-color: rgba(0, 0, 0, 0.7);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: inherit;
+      filter: blur(5px);
+      z-index: -1;
+      transform: scale(1.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1600px;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    /* CARD */
+    .container-box-1,
+    .container-box-2 {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: beige;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    /* Hover lift + shadow */
+    .container-box-1:hover,
+    .container-box-2:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Image zoom */
+    .container-box-1 img,
+    .container-box-2 img {
+      width: 350px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px 0 0 12px;
+      transition: transform 0.4s ease;
+    }
+
+    .container-box-1:hover img,
+    .container-box-2:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Text */
+    .text-box {
+      flex: 1;
+      padding: 20px;
+      min-width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .container-box-1:hover .text-box,
+    .container-box-2:hover .text-box {
+      transform: translateX(5px);
+    }
+
+    .text-box h2 {
+      font-size: 2em;
+      color: purple;
+      text-decoration: underline;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      font-size: 1.1em;
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+
+    /* Button */
+    .text-box button {
+      padding: 10px 18px;
+      background-color: rgba(0, 0, 255, 0.6);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .text-box button:hover {
+      background-color: blue;
+      color: papayawhip;
+      transform: translateY(-3px);
+      box-shadow: 1px 5px 10px lightblue;
+    }
+
+    /* Inner RGB Glow Border effect  */
+    .container-box-1::after,
+    .container-box-2::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 3px;
+      background: linear-gradient(90deg,
+          red,
+          orange,
+          yellow,
+          green,
+          cyan,
+          blue,
+          purple,
+          red);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: 0.4s ease;
+      pointer-events: none;
+      animation: rgbGlow 3s linear infinite;
+    }
+
+    /* Show glow inside on hover */
+    .container-box-1:hover::after,
+    .container-box-2:hover::after {
+      opacity: 1;
+    }
+
+    @keyframes rgbGlow {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    /* RESPONSIVE DESIGN*/
+
+    @media (max-width: 992px) {
+
+      .container-box-1 img,
+      .container-box-2 img {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .container-box-1,
+      .container-box-2 {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .text-box h2 {
+        font-size: 1.6em;
+      }
+
+      .text-box p {
+        font-size: 1em;
+      }
+
+      .text-box button {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="container-box-1">
+      <img src="healthy.jpg" alt="">
+      <div class="text-box">
+        <h2>Post title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit facilis Necessitatibus asperiores
+          libero quos dolore architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem expedita
+          error consequuntur fuga dolorem dolorum, at minus quaerat numquam.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="container-box-2">
+      <img src="healthy.jpg" alt="">
+      <div class="text-box">
+        <h2>Post title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit facilis! Necessitatibus asperiores
+          libero quos dolore architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit et delectus
+          beatae! Molestiae nulla a corporis ducimus quas numquam voluptatum?</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
