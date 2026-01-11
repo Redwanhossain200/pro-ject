@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flex</title>
+
+  <!-- Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgba(0, 0, 0, 0.8);
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    h2 {
+      color: white;
+      margin: 20px;
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      margin: 20px;
+    }
+
+    .box {
+      background-color: teal;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .items {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      width: 100px;
+      background-color: tomato;
+      padding: 10px;
+      border-radius: 20px;
+      text-align: center;
+      color: wheat;
+      text-shadow: 0 0 20px 5px grey;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .items:hover {
+      background-color: chocolate;
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px 3px grey;
+      color: lightgrey;
+    }
+
+    .box-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width:576px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .items {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Lets explore flex</h2>
+  <!-- .box>h3{box-$}+p{lorem} -->
+  <div class="container">
+    <div class="box">
+      <h3>Box-1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil iusto explicabo velit corporis
+        reiciendis laudantium nobis similique laboriosam dolorum quas libero? Maxime, velit officia? Fugiat nihil veniam
+        aspernatur quo aut laudantium at repudiandae enim molestias, animi porro consequatur eligendi quae molestiae
+        voluptatum possimus velit mollitia, eos vero expedita? Veniam doloremque ullam voluptates reiciendis est illum
+        eum, sapiente cupiditate in?</p>
+    </div>
+    <div class="box">
+      <h3>Box-2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil iusto explicabo velit corporis
+        reiciendis laudantium nobis similique laboriosam dolorum quas libero? Maxime, velit officia? Fugiat nihil veniam
+        aspernatur quo aut laudantium at repudiandae enim molestias, animi porro consequatur eligendi quae molestiae
+        voluptatum possimus velit mollitia, eos vero expedita? Veniam doloremque ullam voluptates reiciendis est illum
+        eum, sapiente cupiditate in?</p>
+    </div>
+  </div>
+
+  <!-- .items*20{box$} -->
+  <div class="box-container">
+    <div class="items">Box-1</div>
+    <div class="items">Box-2</div>
+    <div class="items">Box-3</div>
+    <div class="items">Box-4</div>
+    <div class="items">Box-5</div>
+    <div class="items">Box-6</div>
+    <div class="items">Box-7</div>
+    <div class="items">Box-8</div>
+    <div class="items">Box-9</div>
+    <div class="items">Box-10</div>
+    <div class="items">Box-11</div>
+    <div class="items">Box-12</div>
+    <div class="items">Box-13</div>
+    <div class="items">Box-14</div>
+    <div class="items">Box-15</div>
+    <div class="items">Box-16</div>
+    <div class="items">Box-17</div>
+    <div class="items">Box-18</div>
+    <div class="items">Box-19</div>
+    <div class="items">Box-20</div>
+  </div>
+</body>
+
+</html>
