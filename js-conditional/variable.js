@@ -1,4 +1,4 @@
-/* VARIABALE ==> Container */
+/* VARIABLE ==> Container */
 
 // Number type variable 
 var sunglassPrice = 80;
